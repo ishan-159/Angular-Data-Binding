@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DataBinding';
-  message: string;
-  logoUrl = 'https://gumlet.assettype.com/freepressjournal%2F2021-06%2F32af7f9f-b603-4e12-8340-ba2425bb5ee8%2FBridgeLabz.PNG';
-  siteUrl = 'https://www.bridgelabz.com';
+  logoPath: string = 'https://images.yourstory.com/cs/images/companies/logo-1586419574337.jpg?fm=auto&ar=1%3A1&mode=fill&fill=solid&fill-color=fff&format=auto&w=384&q=75';
+  bridgelabzUrl: string = 'https://www.bridgelabz.com';
+  userName: string = '';  // This will store the user input
 
-  constructor() {
-    this.message = 'Hello from BridgeLabz';
-  }
   openBridgeLabzSite() {
-    window.open(this.siteUrl, '_blank'); 
+    window.open(this.bridgelabzUrl, '_blank');
   }
 }
